@@ -5,6 +5,42 @@
       "email": "monika@gmail.com",
       "password": "verma",
       "id": 1
+    },
+    {
+      "name": "Piyush",
+      "password": "hdui",
+      "email": "grani7683@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "petre",
+      "password": "chjdh",
+      "email": "grani7683@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Piyush_verma",
+      "password": "gbbhggth",
+      "email": "grani7683@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "suresh",
+      "password": "verma",
+      "email": "grani7683@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "kuch",
+      "password": "bhi",
+      "email": "grani7683@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "another",
+      "password": "xmndkj",
+      "email": "grani7683@gmail.com",
+      "id": 7
     }
   ]
 }

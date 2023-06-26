@@ -1,12 +1,21 @@
 <div class="seller">
-  <div class="signup">
-
-    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
+  <div class="signup" >
+<p style="text-align: center;color:red">{{authError}}</p>
+    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form" *ngIf="!login">
       <h1>Sign Up</h1>
       <input class="form-input"type="text" name="name" placeholder="Enter your name"ngModel>
       <input class="form-input" name="password"type="password" placeholder="Enter your password" ngModel>
       <input class="form-input"name="email"type="email" placeholder="Enter your Email" ngModel>
       <button class="form-btn">Sign Up</button>
+      <a (click)="openlogin()">already have account? Click here</a>
+    </form>
+
+    <form #sellerSignUp="ngForm" (ngSubmit)="signIn(sellerSignUp.value)" class="common-form" *ngIf="login">
+      <h1>Sign Login</h1>
+      <input class="form-input"name="email"type="email" placeholder="Enter your Email" ngModel>
+      <input class="form-input" name="password"type="password" placeholder="Enter your password" ngModel>
+      <button class="form-btn">Sign Login</button>
+      <a (click)="opensign()">don't have account? Click here</a>
     </form>
   </div>
 </div>
