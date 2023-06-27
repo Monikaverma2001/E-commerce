@@ -5,9 +5,8 @@ import { signUp } from 'src/app/data-type';
 import { BehaviorSubject, Observable } from 'rxjs'
 import { UrlTree } from '@angular/router';
 import { Router } from '@angular/router';
-import { json } from 'express';
 import {EventEmitter} from '@angular/core'
-import { MongoMissingCredentialsError } from 'mongodb';
+
 @Injectable({
   providedIn: 'root'
 })

@@ -1,0 +1,29 @@
+table{
+  text-align: left;
+  color:blueviolet;
+  border-collapse: collapse;
+}
+table td,table th{
+  border:1px solid rgb(0, 0, 0);
+  padding: 10px;
+  min-width: 160px;
+
+}
+table td img{
+  height: 100px;
+  width: 100px;
+}
+button{
+  border: 1px solid blueviolet;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 12px;
+  width: 70%;
+}
+button:hover{
+
+  background-color: rgb(191, 157, 224);
+  padding: 15px;
+  border-radius: 12px;
+  width: 70%;
+}

@@ -1,1 +1,38 @@
-<p>seller-home works!</p>
+<div class="seller-home">
+  <h1>Product List</h1>
+
+  <div >
+    <!-- <ul>
+      <ng-template ngFor let-hero [ngForOf]="sellerProduct">
+        <li>{{hero.name}}
+      </ng-template>
+    </ul> -->
+    <table>
+      <thead>
+        <tr>
+          <th>image</th>
+          <th>Name</th>
+          <th>price</th>
+          <th>color</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="sellerProduct">
+
+        <tr *ngFor="let item of sellerProduct">
+          <td><img src="{{item.image}}" alt="{{item.image}}"></td>
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.color}}</td>
+          <td>{{item.discription}}</td>
+          <td>{{item.category}}</td>
+          <td><button (click)="delete(item.id)">Delete Item</button></td>
+        </tr>
+
+      </tbody>
+
+    </table>
+</div>
+</div>

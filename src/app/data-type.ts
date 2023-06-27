@@ -9,3 +9,12 @@ export interface signin{
   password:String
 }
 
+export interface product{
+  name:String,
+  price:String,
+  color:String,
+  category:String,
+  discription:String,
+  image:String,
+  id:number
+}

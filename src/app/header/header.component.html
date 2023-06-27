@@ -13,6 +13,7 @@
 </ul>
 <ul *ngIf="menuType==='seller'">
   <li><h1>Welcome {{Name }}</h1></li>
+  <li><a routerLink="/seller-home">Seller Home</a></li>
   <li><a routerLink="/seller-product-list">ProductList</a></li>
   <li><a href="/seller-add-product">Add Product</a></li>
   <li><a (click)="logout()" style="cursor: pointer;">Logout</a></li>

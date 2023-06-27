@@ -42,5 +42,34 @@
       "email": "grani7683@gmail.com",
       "id": 7
     }
+  ],
+  "product": [
+    {
+      "name": "iphone 12",
+      "price": "100000",
+      "category": "mobiles",
+      "color": "black",
+      "image": "https://ismart.co.in/wp-content/uploads/2021/01/iPhine-12-2.jpg",
+      "discription": "Super Retina XDR display 15.40 cm / 6.1‑inch (diagonal) all‑screen OLE Ddisplay 2532x1170-pixel resolution at 460 ppi",
+      "id": 1
+    },
+    {
+      "name": "Redmi",
+      "price": "120000",
+      "color": "black",
+      "category": "mobile",
+      "discription": "Redmi Note 12 Pro+ 5G Price in India, Specifications",
+      "image": "https://i.gadgets360cdn.com/products/large/redmi-note-12-5g-pro-plus-db-gadgets360-800x600-1673019783.jpg",
+      "id": 2
+    },
+    {
+      "name": " Micromax IN ",
+      "price": "1348999",
+      "color": "silver",
+      "category": "mobile",
+      "discription": "Buy Latest Micromax IN Mobiles Smartphone Online\nImages may be subject to copyright. Learn More",
+      "image": "https://micromaxinfo.com/pub/media/catalog/category/in_listing_banner.png",
+      "id": 4
+    }
   ]
 }
