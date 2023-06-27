@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AuthGuard } from './auth.guard';
+import { SellerProductListComponent } from './seller-product-list/seller-product-list.component';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { AuthGuard } from './auth.guard';
     HomeComponent,
     SellerAuthComponent,
     SellerHomeComponent,
+    SellerProductListComponent,
+    SellerAddProductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-   
+
   ],
   providers: [],
   bootstrap: [AppComponent]

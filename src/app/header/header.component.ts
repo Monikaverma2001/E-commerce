@@ -17,8 +17,10 @@ ngOnInit(): void {
     if(val.url){
       if(localStorage.getItem("seller") && val.url.includes("seller"))
       {
-        this.Name=this.seller.sellerName;
+        let data=localStorage.getItem("seller");
+        let d=data && JSON.parse(data)[0];
         //console.log("inside seller");
+        this.Name=d.name;
         this.menuType="seller";
       }
       else{
