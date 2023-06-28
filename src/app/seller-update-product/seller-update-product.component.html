@@ -1,0 +1,15 @@
+<div class="update-product">
+
+  <form #addp="ngForm" (ngSubmit)="submit(addp.value)" *ngIf="data"
+  class="common-form">
+  <h1>UPDATE PRODUCT</h1>
+      <input ngModel={{data?.name}} class="form-input" name="name" type="text" placeholder="{{data.name}}" >
+      <input ngModel={{data?.price}} class="form-input" name="price" type="text" placeholder="{{data.price}}" >
+      <input ngModel={{data?.color}} class="form-input" name="color" type="text" placeholder="{{data.color}}" >
+      <input  ngModel={{data?.category}} class="form-input" name="category" type="text" placeholder="{{data.category}} " >
+      <textarea ngModel={{data?.discription}} class="form-input" name="discription" type="text" placeholder="{{data.discription}}" ></textarea>
+      <input ngModel={{data?.image}} class="form-input" name="image" type="text" placeholder="{{data.image}}" >
+      <button class="form-btn">Update Product</button>
+
+  </form>
+</div>
