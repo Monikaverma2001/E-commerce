@@ -18,8 +18,13 @@ color: blueviolet;
   padding-left: 10px;
   color: blueviolet;
 }
+.carousel-caption{
+  background-color: #00000082;
+  border-radius: 5px;
+}
 .form-btn{
   height: 35px;
   border: 1px solid blueviolet;
   cursor: pointer;
 }
+

@@ -21,6 +21,9 @@ export class ProductService {
   getProduct():Observable<product[]> {
     return this.http.get<product[]>('http://localhost:3000/product')
    }
+   getProducttrendy():Observable<product[]> {
+    return this.http.get<product[]>('http://localhost:3000/product?_limit=8')
+   }
    deleteProduct(id:number):any{
     return this.http.delete(`http://localhost:3000/product/${id}`);
    }
@@ -30,5 +33,11 @@ export class ProductService {
    updateProduct(data:product,id:number):any{
     return this.http.put(`http://localhost:3000/product/${id}`,data,{observe:'response'})
 
+   }
+   popularProduct():Observable<product[]> {
+    return this.http.get<product[]>('http://localhost:3000/product?_limit=3')
+   }
+   searching(data:String):any{
+    return this.http.get(`http://localhost:3000/product?q=${data}`)
    }
 }

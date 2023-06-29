@@ -1,15 +1,19 @@
+import { product } from './../data-type';
 import { Component } from '@angular/core';
 import { SellerService } from 'src/servicies/seller.service';
 import {Router} from '@angular/router'
+import { ProductService } from 'src/servicies/product.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private seller:SellerService,private router:Router){}
+  constructor(private seller:SellerService,private router:Router,private product:ProductService){}
 menuType:String='default';
 Name:String='';
+data:undefined| product[];
 ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
@@ -34,5 +38,23 @@ logout():void{
   localStorage.removeItem('seller');
   this.menuType='default';
   this.router.navigate(['seller-auth'])
+}
+submit(query:any):any{
+  if(query)
+ {
+  let d=query.target as HTMLInputElement;
+  console.log(d);
+  this.product.searching(d.value).subscribe((result:product[])=>
+  {
+   // console.log(result);
+   if(result.length>5)
+      result.length=5;
+    this.data=result;
+  })
+
+}
+}
+hidesearch():void{
+  this.data=undefined;
 }
 }

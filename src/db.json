@@ -70,6 +70,24 @@
       "discription": "Buy Latest Micromax IN Mobiles Smartphone Online\nImages may be subject to copyright. Learn More",
       "image": "https://micromaxinfo.com/pub/media/catalog/category/in_listing_banner.png",
       "id": 4
+    },
+    {
+      "name": "nike shoe",
+      "price": "1400",
+      "color": "red",
+      "category": "shoe",
+      "discription": "nike brand",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "id": 5
+    },
+    {
+      "name": "nike shoe",
+      "price": "15790",
+      "color": "white",
+      "category": "shoe",
+      "discription": "nike brand",
+      "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2hvZXN8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "id": 6
     }
   ]
 }
