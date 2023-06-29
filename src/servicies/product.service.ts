@@ -4,11 +4,12 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { product } from 'src/app/data-type';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
+  searchData:undefined|product[];
   constructor(private http: HttpClient, private router: Router) { }
   addProduct(data:product):any{
    this.http.post('http://localhost:3000/product',data,{observe:'response'}).subscribe(()=>{
@@ -39,5 +40,9 @@ export class ProductService {
    }
    searching(data:String):any{
     return this.http.get(`http://localhost:3000/product?q=${data}`)
+   }
+
+   productSearch(query:String):Observable<product[]>{
+    return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
    }
 }

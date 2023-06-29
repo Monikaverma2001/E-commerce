@@ -43,7 +43,7 @@ submit(query:any):any{
   if(query)
  {
   let d=query.target as HTMLInputElement;
-  console.log(d);
+ // console.log(d);
   this.product.searching(d.value).subscribe((result:product[])=>
   {
    // console.log(result);
@@ -53,6 +53,11 @@ submit(query:any):any{
   })
 
 }
+}
+getSearch(data:String):any{
+ // console.log(data.value)
+  this.router.navigate([`search/${data}`])
+  //this.product.productSearch(data.s);
 }
 hidesearch():void{
   this.data=undefined;

@@ -42,8 +42,9 @@ const routes: Routes = [
 
 }
 ,{
-  path:'search/query',
   component:ProductSearchComponent,
+  path:'search/:query',
+
 }
 ];
 
