@@ -1,35 +1,18 @@
-<div style="margin: 20px;" class="product-item">
-  <h1>Suggested Data</h1>
-  <div class="product-list-wrapper" >
-    <div  >
-      <div   *ngFor="let item of data">
-        <div class="cont" >
-          <img
-            src="{{item.image}}"
-            alt="image">
+<div *ngFor="let item of data" class="row search-item">
 
-          <div class="product-details">
-            <h6 class="product-head">{{item.name}}</h6>
-            <div class="product-price">
-              <h6>Pirce : {{item.price}}</h6>
-            </div>
-            <div class="product-color">
-              <h6>Color : {{item.color}}</h6>
-            </div>
-
-          </div>
-          <div class="product-footer">
-            <a href="">view details</a><br>
-            <a href="">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
+  <div class="col-sm-3">
+    <img src="{{item.image}}" alt="image">
   </div>
-  </div>
-  <div *ngIf="!data" >
-
+  <div class="col-sm-8 details">
+    <h3>{{item.name}}</h3>
+    <p><b>PRICE : {{item.price}}</b></p>
+    <p><b>COLOR : {{item.color}}</b></p>
+    <p><span>CATEGORY : {{item.category}}</span></p>
+    <p>
+      <span>
+        DETAILS : {{item.discription}}
+      </span>
+    </p>
   </div>
 
-
+</div>
