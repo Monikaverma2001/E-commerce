@@ -45,4 +45,8 @@ export class ProductService {
    productSearch(query:String):Observable<product[]>{
     return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`);
    }
+   productdetail(id:String):Observable<product>{
+    return this.http.get<product>(`http://localhost:3000/product/${id}`)
+
+   }
 }

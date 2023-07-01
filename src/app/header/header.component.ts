@@ -1,7 +1,7 @@
 import { product } from './../data-type';
 import { Component } from '@angular/core';
 import { SellerService } from 'src/servicies/seller.service';
-import {Router} from '@angular/router'
+import {Route, Router} from '@angular/router'
 import { ProductService } from 'src/servicies/product.service';
 
 @Component({
@@ -54,10 +54,11 @@ submit(query:any):any{
 
 }
 }
-getSearch(data:String):any{
+getSearch(data:String): any{
  // console.log(data.value)
-  this.router.navigate([`search/${data}`])
+  return this.router.navigate([`/search/${data}`])
   //this.product.productSearch(data.s);
+
 }
 hidesearch():void{
   this.data=undefined;

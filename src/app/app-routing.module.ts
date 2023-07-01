@@ -8,6 +8,8 @@ import { SellerProductListComponent } from './seller-product-list/seller-product
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { ProductSearchComponent } from './product-search/product-search.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 const routes: Routes = [
   {
@@ -45,6 +47,14 @@ const routes: Routes = [
   component:ProductSearchComponent,
   path:'search/:query',
 
+}
+,{
+  component:ProductDetailComponent,
+  path:'productdetail/:id',
+
+},{
+  component:UserAuthComponent,
+  path:'user-auth'
 }
 ];
 

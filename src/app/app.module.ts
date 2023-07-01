@@ -15,6 +15,8 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { NgbPaginationModule, NgbAlertModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ngbCarouselTransitionIn, ngbCarouselTransitionOut } from '@ng-bootstrap/ng-bootstrap/carousel/carousel-transition';
 import { ProductSearchComponent } from './product-search/product-search.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ProductSearchComponent } from './product-search/product-search.componen
     SellerAddProductComponent,
     SellerUpdateProductComponent,
     ProductSearchComponent,
+    ProductDetailComponent,
+    UserAuthComponent,
   ],
   imports: [
     BrowserModule,

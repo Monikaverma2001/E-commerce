@@ -46,10 +46,10 @@
   "product": [
     {
       "name": "iphone2",
-      "price": "fvjkjf",
-      "color": "fgjkr",
-      "category": "dfgygiuoipoo; hjuhu",
-      "discription": "vfvjkjrg",
+      "price": "500000",
+      "color": "blue",
+      "category": "mobile",
+      "discription": "mobile",
       "image": "https://i.gadgets360cdn.com/products/large/redmi-note-12-5g-pro-plus-db-gadgets360-800x600-1673019783.jpg",
       "id": 1
     },
@@ -88,6 +88,41 @@
       "discription": "nike brand",
       "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2hvZXN8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
       "id": 6
+    },
+    {
+      "name": "phone",
+      "price": "18000",
+      "color": "red",
+      "category": "mobile",
+      "discription": "hai product",
+      "image": "https://micromaxinfo.com/pub/media/catalog/category/in_listing_banner.png",
+      "id": 7
+    },
+    {
+      "name": "phone4",
+      "price": "18000",
+      "color": "black",
+      "category": "mobile",
+      "discription": "hai product4",
+      "image": "https://micromaxinfo.com/pub/media/catalog/category/in_listing_banner.png",
+      "id": 8
+    },
+    {
+      "name": "phone6",
+      "price": "180900",
+      "color": "white",
+      "category": "mobile",
+      "discription": "hai product5",
+      "image": "https://micromaxinfo.com/pub/media/catalog/category/in_listing_banner.png",
+      "id": 9
+    }
+  ],
+  "user": [
+    {
+      "username": "user1",
+      "email": "mail1@user.com",
+      "password": "verma",
+      "id": 1
     }
   ]
 }

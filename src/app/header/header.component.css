@@ -38,6 +38,18 @@ ul li a{
   border:1px solid blueviolet;
   height: 40px;
 }
+.suggested-result{
+  background-color: white;
+  position: absolute;
+  display: list-item !important;
+  z-index: 10;
+  width: 300px;
+  top:40px;
 
+}
+.suggested-result li{
+  padding: 2px;
+border: 1px solid #ddd;
+}
 
 
