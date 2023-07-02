@@ -123,6 +123,24 @@
       "email": "mail1@user.com",
       "password": "verma",
       "id": 1
+    },
+    {
+      "username": "user2",
+      "email": "user2@text.com",
+      "password": "user2",
+      "id": 2
+    },
+    {
+      "username": "monika",
+      "email": "monika",
+      "password": "monika",
+      "id": 3
+    },
+    {
+      "username": "monika1",
+      "email": "monika1",
+      "password": "monika1",
+      "id": 4
     }
   ]
 }

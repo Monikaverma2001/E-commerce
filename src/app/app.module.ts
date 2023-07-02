@@ -17,6 +17,7 @@ import { ngbCarouselTransitionIn, ngbCarouselTransitionOut } from '@ng-bootstrap
 import { ProductSearchComponent } from './product-search/product-search.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     ProductSearchComponent,
     ProductDetailComponent,
     UserAuthComponent,
+    UserHomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ export class HeaderComponent {
 menuType:String='default';
 Name:String='';
 data:undefined| product[];
+username:String='';
 ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
@@ -27,6 +28,15 @@ ngOnInit(): void {
         this.Name=d.name;
         this.menuType="seller";
       }
+      else if(localStorage.getItem("user") || val.url.includes("user"))
+      {
+        let data=localStorage.getItem("user");
+        let d=data && JSON.parse(data);
+        console.log(d);
+        //console.log("inside seller");
+       this.username=d.username;
+        this.menuType="user";
+      }
       else{
         //console.log("outside seller");
         this.menuType="default";
@@ -38,6 +48,12 @@ logout():void{
   localStorage.removeItem('seller');
   this.menuType='default';
   this.router.navigate(['seller-auth'])
+}
+logoutuser():void{
+  localStorage.removeItem('user');
+  this.menuType='default';
+  this.router.navigate(['seller-auth'])
+
 }
 submit(query:any):any{
   if(query)

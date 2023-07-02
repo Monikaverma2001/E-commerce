@@ -1,6 +1,6 @@
 import { UserService } from './../../servicies/user.service';
 import { Component } from '@angular/core';
-import { signUp } from '../data-type';
+import { usersignUp} from '../data-type';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,15 +9,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent {
+  islogin=false;
   constructor(private user:UserService,private router:Router){}
-signup(data:signUp){
-  this.user.usersignUp(data).subscribe((result:any)=>
-  {
-    if(result)
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    if(localStorage.getItem('user'))
     {
-      localStorage.setItem("user",JSON.stringify(result.body));
-      this.router.navigate(['/']);
+      this.router.navigate(['/'])
     }
-  });
+  }
+signup(data:usersignUp){
+  this.user.usersignUp(data)
+}
+signin(data:usersignUp){
+  this.user.usersignIn(data)
+}
+change()
+{
+  this.islogin=!this.islogin;
 }
 }

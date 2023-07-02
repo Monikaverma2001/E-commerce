@@ -3,6 +3,11 @@ export interface signUp{
   email:String,
   password:String
 }
+export interface usersignUp{
+  username:String,
+  email:String,
+  password:String
+}
 
 export interface signin{
   email:String,

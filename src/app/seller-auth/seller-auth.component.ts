@@ -29,7 +29,7 @@ signUp(data:signUp):void{
 
 
 }
-signIn(data:signin):void{
+signIn(data:signUp):void{
   this.seller.userSignIn(data);
   this.seller.isLoginError.subscribe((error)=>{
     if(error)

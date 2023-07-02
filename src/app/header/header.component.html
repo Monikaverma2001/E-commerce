@@ -13,19 +13,28 @@
 
 
 </div>
+
+<ul *ngIf="menuType==='seller'">
+  <li><h1>Welcome {{Name}}</h1></li>
+  <li><a routerLink="/seller-home">Seller Home</a></li>
+  <li><a routerLink="/seller-product-list">ProductList</a></li>
+  <li><a href="/seller-add-product">Add Product</a></li>
+  <li><a (click)="logout()" style="cursor: pointer;">Logout</a></li>
+</ul>
+<ul *ngIf="menuType==='user'">
+  <li><h1>Welcome {{username}}</h1></li>
+  <li><a routerLink="">Home</a></li>
+  <li><a >User home</a></li>
+  <li><a (click)="logoutuser()" style="cursor: pointer;">Logout</a></li>
+  <li><a href="#">Cart(0)</a></li>
+
+</ul>
 <ul *ngIf="menuType=='default'">
   <li><a routerLink="">Home</a></li>
   <li><a routerLink="/seller-auth">Seller</a></li>
   <li><a routerLink="user-auth">Login/SignUp</a></li>
   <li><a href="#">Cart(0)</a></li>
 
-</ul>
-<ul *ngIf="menuType==='seller'">
-  <li><h1>Welcome {{Name }}</h1></li>
-  <li><a routerLink="/seller-home">Seller Home</a></li>
-  <li><a routerLink="/seller-product-list">ProductList</a></li>
-  <li><a href="/seller-add-product">Add Product</a></li>
-  <li><a (click)="logout()" style="cursor: pointer;">Logout</a></li>
 </ul>
 <h1></h1>
 </nav>
