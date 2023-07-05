@@ -3,18 +3,27 @@
 <p style="text-align: center;color:red">{{authError}}</p>
     <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form" *ngIf="!login">
       <h1>Sign Up</h1>
-      <input class="form-input"type="text" name="name" placeholder="Enter your name"ngModel>
-      <input class="form-input" name="password"type="password" placeholder="Enter your password" ngModel>
-      <input class="form-input"name="email"type="email" placeholder="Enter your Email" ngModel>
-      <button class="form-btn">Sign Up</button>
+      <input class="form-input"type="text" name="name" placeholder="Enter your name"ngModel required>
+
+      <input class="form-input" type="email" placeholder="enter email" #email="ngModel" name="email"ngModel required>
+    <p ><span class="invalidinput" *ngIf="email.invalid && email.touched">Enter a valid Email </span></p>
+
+    <input class="form-input" type="password" placeholder="enter password" name="password" #password="ngModel" ngModel required>
+    <p ><span class="invalidinput" *ngIf="password.invalid && password.touched">Enter a valid password </span></p>
+
+      <button [disabled]="sellerSignUp.invalid" class="form-btn">Sign Up</button>
       <a (click)="openlogin()">already have account? Click here</a>
     </form>
 
-    <form #sellerSignUp="ngForm" (ngSubmit)="signIn(sellerSignUp.value)" class="common-form" *ngIf="login">
+    <form #sellerSignIn="ngForm" (ngSubmit)="signIn(sellerSignIn.value)" class="common-form" *ngIf="login">
       <h1>Sign Login</h1>
-      <input class="form-input"name="email"type="email" placeholder="Enter your Email" ngModel>
-      <input class="form-input" name="password"type="password" placeholder="Enter your password" ngModel>
-      <button class="form-btn">Sign Login</button>
+     <input class="form-input" type="email" placeholder="enter email" #email="ngModel" name="email"ngModel required>
+    <p ><span class="invalidinput" *ngIf="email.invalid && email.touched">Enter a valid Email </span></p>
+
+    <input class="form-input" type="password" placeholder="enter password" name="password" #password="ngModel" ngModel required>
+    <p ><span class="invalidinput" *ngIf="password.invalid && password.touched">Enter a valid password </span></p>
+
+     <button [disabled]="sellerSignIn.invalid" class="form-btn">Sign Login</button>
       <a (click)="opensign()">don't have account? Click here</a>
     </form>
   </div>

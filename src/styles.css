@@ -3,6 +3,12 @@ body{
   font-family: sans-serif;
 
 }
+.invalidinput{
+  color:red;
+  font-size: 12px;
+
+  text-align: center;
+}
 .common-form{
   text-align: center;
   display: flex;

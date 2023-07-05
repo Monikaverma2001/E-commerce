@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent {
-  islogin=false;
-  constructor(private user:UserService,private router:Router){}
+  error:String='';
+  islogin=true;
+   constructor(private user:UserService,private router:Router){}
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
@@ -24,6 +25,10 @@ signup(data:usersignUp){
 }
 signin(data:usersignUp){
   this.user.usersignIn(data)
+  if(this.user.islogin==false)
+  {
+    this.error="enter a valid details";
+  }
 }
 change()
 {
