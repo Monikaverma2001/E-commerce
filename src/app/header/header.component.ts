@@ -15,9 +15,17 @@ menuType:String='default';
 Name:String='';
 data:undefined| product[];
 username:String='';
+cart:number |any;
 ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
+  let cartitem=localStorage.getItem('localCart');
+  if(cartitem)
+     this.cart = JSON.parse(cartitem).length;
+
+  this.product.cartData.subscribe((item)=>{
+    this.cart=item.length;
+  })
   this.router.events.subscribe((val:any)=>{
     if(val.url){
       if(localStorage.getItem("seller") && val.url.includes("seller"))
@@ -28,10 +36,10 @@ ngOnInit(): void {
         this.Name=d.name;
         this.menuType="seller";
       }
-      else if(localStorage.getItem("user") && val.url.includes("user"))
+      else if(localStorage.getItem("user") )
       {
         let data=localStorage.getItem("user");
-        let d=data && JSON.parse(data);
+        let d=data && JSON.parse(data)[0];
         console.log(d);
         //console.log("inside seller");
        this.username=d.username;
@@ -43,6 +51,7 @@ ngOnInit(): void {
       }
     }
   })
+
 }
 logout():void{
   localStorage.removeItem('seller');

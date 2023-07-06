@@ -52,7 +52,7 @@
         </div>
         <div class="product-footer">
           <a routerLink="productdetail/{{item.id}}">view details</a><br>
-          <a href="">Add to Cart</a>
+          <button class="addToCart" (click)="addToCart(item.id)">Add to Cart</button>
         </div>
       </div>
     </div>

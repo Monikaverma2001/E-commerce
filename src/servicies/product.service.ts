@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { product } from 'src/app/data-type';
@@ -9,6 +9,7 @@ import { product } from 'src/app/data-type';
   providedIn: 'root'
 })
 export class ProductService {
+  cartData=new EventEmitter<product[] | []>();
   searchData:undefined|product[];
   constructor(private http: HttpClient, private router: Router) { }
   addProduct(data:product):any{
@@ -48,5 +49,30 @@ export class ProductService {
    productdetail(id:String):Observable<product>{
     return this.http.get<product>(`http://localhost:3000/product/${id}`)
 
+   }
+   localStorageAddToCart(data:product){
+    let cartData=[];
+    let localData=localStorage.getItem('localCart');
+    if(!localData)
+    {
+      localStorage.setItem('localCart',JSON.stringify([data]));
+    }
+    else{
+      //code
+      cartData=JSON.parse(localData);
+      cartData.push(data);
+      localStorage.setItem('localCart',JSON.stringify(cartData));
+    }
+    this.cartData.emit(cartData);
+   }
+   removeItemFromCart(productId:number|any){
+    let cartdata=localStorage.getItem('localCart');
+    if(cartdata)
+    {
+      let items:product[]=JSON.parse(cartdata);
+      items=items.filter((item:product)=>productId!==item.id);
+      localStorage.setItem('localCart',JSON.stringify(items));
+      this.cartData.emit(items);
+    }
    }
 }

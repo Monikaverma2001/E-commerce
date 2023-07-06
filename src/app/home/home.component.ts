@@ -25,4 +25,8 @@ data:undefined|product[];
 
     })
   }
+  addToCart(data:any)
+  {
+
+  }
 }

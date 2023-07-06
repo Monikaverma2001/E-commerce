@@ -1,20 +1,22 @@
-<div *ngIf="data" class="row search-item">
+<div *ngIf="Productdata" class="row search-item">
 
   <div class="col-sm-5">
-    <img src="{{data.image}}" alt="image" class="product-image">
+    <img src="{{Productdata.image}}" alt="image" class="product-image">
   </div>
   <div class="col-sm-7 details">
-    <h3>{{data.name}}</h3>
-    <p><b>PRICE : {{data.price}}</b></p>
-    <p > COLOR : {{data.color}} <br><br><p [style.background-color]="data.color" class="product-colr"> </p>  </p>
-    <p><span>CATEGORY : {{data.category}}</span></p>
+    <h3>{{Productdata.name}}</h3>
+    <p><b>PRICE : {{Productdata.price}}</b></p>
+    <p > COLOR : {{Productdata.color}} <br><br><p [style.background-color]="Productdata.color" class="product-colr"> </p>  </p>
+    <p><span>CATEGORY : {{Productdata.category}}</span></p>
     <p>
       <span>
-        DETAILS : {{data.discription}}
+        DETAILS : {{Productdata.discription}}
       </span>
     </p>
-    <button>Add to cart</button>
-    <button>Buy Now</button>
+
+       <button *ngIf="!removecart" class="addToCart" (click)="addToCart(Productdata.id)">Add to Cart</button>
+        <button *ngIf="removecart" class="addToCart" (click)="removeToCart(Productdata.id)">Remove to Cart</button>
+
     <div class="quantity " >
       <button class="form-btn" style="width: 30px;" (click)="sub()">-</button>
       <input  class="form-input" type="number" value="{{count}}" style="width: 50px;" disabled>
@@ -42,8 +44,8 @@
             </div>
             <div class="product-footer">
               <a routerLink="/productdetail/{{item.id}}" >view details</a><br>
-              <a href="">Add to Cart</a>
-            </div>
+              <button *ngIf="!removecart" class="addToCart" (click)="addToCart(item.id)">Add to Cart</button>
+             </div>
           </div>
         </div>
 

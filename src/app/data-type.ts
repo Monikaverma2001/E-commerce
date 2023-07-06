@@ -21,5 +21,6 @@ export interface product{
   category:String,
   discription:String,
   image:String,
-  id:number
+  id:number,
+  quantity:undefined|number
 }
